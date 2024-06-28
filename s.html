@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .nav{
+    display:inline-flex;
+    height: 45px;
+    width: 100%;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+
+     background-color: rgba(182, 161, 46, 0.678);
+  
+    text-shadow: 0px 0px 2px 3px ;
+
+    padding-top:0%;
+    padding-bottom: 15px;
+}
+.hed{
+    margin-left: 370px;
+    padding-top: 5px;
+}
+.container {
+    width: 200px;
+    margin:0%;
+    padding:0%; 
+  }
+  .header {
+    background-color:transparent;
+    color:black;
+    
+    text-align: left;
+    cursor: pointer;
+    position:sticky;
+    margin-left: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  
+  .header i {
+    float: right;
+    margin-top: 0px;
+    font-size: 15px;
+  }
+
+
+
+body{
+    background-image:url("data:image/jpeg;base64,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");
+    background-size:300px;
+    background-position:940px 430px;
+    background-repeat: no-repeat;
+      
+}
+.wr{
+    padding-left: 15px;   
+}
+.m{
+    display:inline-flex;
+    border: 2px solid rgb(112, 77, 31);
+    border-spacing: 5px;
+    margin-left: 275px;
+    padding-top:10px;
+}
+.a{
+   
+    margin-left:20px;
+    margin-top:0px;
+}
+
+.b{
+    margin-left: 25px;
+    margin-top: 0px;
+    margin-right:25px;
+}
+
+.c{
+    background-color: rgb(3, 3, 44);
+    color:white;
+    padding-left: 15px;
+    margin-left: 0px;
+}
+
+
+
+
+
+.content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  background-color: rgb(83, 47, 0);
+  backface-visibility:hidden;
+  color: white;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.content li:hover {
+  background-color: #bb923b;
+}
+    </style>
+</head>
+<body>
+
+    <div class="nav" >
+       
+        <div class="container">
+            <div class="header" id="bu">
+              <i class="fas fa-bars"></i>
+              
+              <span class="glyphicon glyphicon-th-list"></span>
+          
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="content">
+                <ul>
+                  <li>Fresh Meat</li>
+                  <li>Vegetables</li>
+                  <li>Fruit & Nut Gifts</li>
+                  <li>Fresh Berries</li>
+                  <li>Ocean Foods</li>
+                  <li>Butter & Eggs</li>
+                <li>Fastfood</li>
+                <li>Fresh Onion</li>
+                <li>Papayaya & Crisps</li>
+                <li>Oatmeal</li>
+              </ul> 
+          </div>
+      </div>
+      <div class="hed" id="bu"> <h4> MUSAD PACKAGING </h4> </div> 
+    </div>
+
+    <div class="wr">
+      <br>
+      <br>
+       <h3> Welcome to MUSAD PACKAGING : Your One-Stop Solution for Custom Box Packaging</h3>
+ <br>
+At musad packaging, we understand the importance of packaging in today's fast-paced business environment. That's why we're dedicated to providing high-quality, custom box packaging solutions that meet the unique needs of our clients. With years of experience in the industry, we've established ourselves as a leading box packaging company, committed to delivering exceptional products and services that exceed our customers' expectations.
+<br>
+
+<br>
+<h4>Our Story :</h4>
+Founded on the principles of innovation, quality, and customer satisfaction, [Company Name] has grown to become a trusted partner for businesses of all sizes. Our team of experts has a deep understanding of the packaging industry, and we're passionate about helping our clients succeed. From concept to delivery, we're dedicated to providing a seamless experience that sets us apart from other box packaging companies.
+<br>
+<h4>Custom Box Packaging Solutions :</h4>
+We offer a wide range of custom box packaging solutions designed to meet the specific needs of our clients. Whether you're looking for corrugated boxes, folding cartons, or specialty packaging, we've got you covered. Our state-of-the-art facilities and cutting-edge technology enable us to produce high-quality packaging products that are both functional and visually appealing.
+<br><br>
+
+<div class="m">
+<p class="a">
+Corrugated Boxes:-
+<br><br>
+* Regular Slotted Containers (RSC)<br>
+* Half Slotted Containers (HSC)<br>
+* Full Overlap Containers (FOC)<br>
+* Telescope Boxes<br>
+* Folding Cartons<br>
+</p>
+<p class="b">
+    folding carton styles:
+<br><br>
+* Tuck Top Auto-Bottom<br>
+* Tuck Top Snap-Lock Bottom<br>
+* Glue-Seam Bottom<br>
+* Reverse Tuck Top<br>
+* Specialty Packaging<br>
+</p>
+</div>
+<br><br>
+<h4>Why Choose MUSAD PACKAGING ?</h4>
+
+There are many reasons why businesses choose Musad packaging for their box packaging needs. Here are just a few:<br><br>
+
+High-Quality Products: We're committed to producing high-quality packaging products that meet the highest standards of excellence.<br>
+Custom Solutions: We offer custom box packaging solutions designed to meet the unique needs of our clients.<br>
+Fast Turnaround Times: We understand the importance of timely delivery, and we're committed to meeting tight deadlines.<br>
+Competitive Pricing: We offer competitive pricing without compromising on quality.<br>
+Exceptional Customer Service: Our team of experts is dedicated to providing exceptional customer service and support.<br>
+Get a Quote.<br>
+Ready to learn more about our custom box packaging solutions? Contact us today to get a quote for your packaging needs. Our team of experts will work with you to design and produce high-quality packaging products that meet your unique needs.<br>
+<br>
+</div>
+<div class="c">
+<br>
+Contact Us <br><br>
+MUSAD PACKAGING :- <br><br>
+
+Address : Gujrat,sabarkantha<br>
+Phone Number : 9472689302 <br>
+Email Address : musadpackaging123@gmail.org<br><br>
+
+Stay Connected<br>
+Follow us on social media to stay up-to-date on the latest news, trends, and promotions from musad packaging.<br><br>
+
+[Facebook]<br> [Twitter] <br>[LinkedIn] <br>[Instagram]<br><br>
+
+I hope this content provides a comprehensive overview of your box packaging company!
+<br><br>
+    
+
+
+    </div>
+
+
+
+<script>
+    const header = document.querySelector('.header');
+
+// Add an event listener to the header
+header.addEventListener('click', () => {
+  // Get the content element
+  const content = document.querySelector('.content');
+
+  // Toggle the display property of the content element
+  content.style.display = content.style.display === 'none' ? 'block' : 'none';
+});
+</script>
+</body>
+</html>
